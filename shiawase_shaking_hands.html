@@ -46,6 +46,25 @@
     a:visited {
         color: #2980b9;
     }
+    #social-share a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    #social-share a:hover {
+        text-decoration: underline;
+    }
+    #social-share span {
+        margin: 0 5px;
+    }
+    #social-share a#fb-share {
+        color: #4267B2;
+    }
+    #social-share a#line-share {
+        color: #00C300;
+    }
+    #social-share a#twitter-share {
+        color: #1DA1F2;
+    }
     @media screen and (max-width: 767px) {
         iframe {
             max-width: 100%;
@@ -138,7 +157,7 @@
     ジャイアンタイガー
     与党も野党も
     Sponsor Directorも
-    頑張り合うだけ、頑張り合ったら
+    張り合うだけ、張り合ったら
     手と手を繋いで　ぬくもりTime
     </pre>
 
@@ -153,7 +172,7 @@
 
 <p>不管是祖父與祖母、丈夫與妻子、或是老師與學生，無論何時都別忘記那份溫暖。</p>
 
-<p>不管是胖虎和大雄、執政黨和在野黨、或是贊助商和導演，只要互相加油、牽起手，就是溫暖的時光。</p>
+<p>不管是胖虎和大雄、執政黨和在野黨、或是贊助商和導演，與其逞強比較不如放下競爭、牽起手，就是溫暖的時光。</p>
 
 <h2>這首歌的核心訊息是：</h2>
 <p>即使立場不同，也不要忘記我們之間原本就有的溫柔與連結。</p>
@@ -216,6 +235,26 @@
 <br>
 <video style="border: 10px solid #ccc;" controls><source src="shiawase_shaking_hands.mp4"></video>
 <p>願我們都不忘牽手的那個瞬間，<br>不論你是深藍還是深綠，<br>只要我們願意理解彼此，那雙手就永遠值得牽起來。</p>
+<div id="social-share" style="margin-top: 20px;">
+    <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
+    <span> | </span>
+    <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
+    <span> | </span>
+    <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
+</div>
+<script>
+    // 自動抓取當前頁面的 URL
+    var currentUrl = window.location.href;
+    // Facebook 分享
+    document.getElementById("fb-share").href =
+        "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
+    // Line 分享
+    document.getElementById("line-share").href =
+        "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
+    // X (Twitter) 分享
+    document.getElementById("twitter-share").href =
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+</script>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="yourNonce">
